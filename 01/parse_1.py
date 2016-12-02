@@ -70,7 +70,8 @@ for direction in directions:
     print "facing %s, traveling %d to %s" % (compass_names[compass], distance, coord)
 
 print "Need to travel to %s, for a total of %d blocks" % (coord, abs(coord[0]) + abs(coord[1]))
-print "Crossed %d time(s), the first one at %s for a distance of %d" % (len(crosses), crosses[0], abs(crosses[0][0]) + abs(crosses[0][1]))
+if len(crosses) > 0:
+    print "Crossed %d time(s), the first one at %s for a distance of %d" % (len(crosses), crosses[0], abs(crosses[0][0]) + abs(crosses[0][1]))
 
 
 ### Generate a nice map
