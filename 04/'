@@ -1,0 +1,9 @@
+import System.Environment
+import Data.Map
+
+main = do
+  [s] <- getArgs
+  f <- readFile s
+  putStr ((unlines . Prelude.map process . lines) f)
+
+process s = show(toList $ fromListWith (+) [(c, 1) | c <- s])
